@@ -1,8 +1,13 @@
 "use strict";
+
+// Виконай додавання 0,1 і 0,2 добийся математично правильної відповіді.
+
 let sum = (0.1 * 10 + 0.2 * 10) / 10;
 console.log(sum);
 
 console.log(Number((0.1 + 0.2).toFixed(2)));
+
+// Виконай додавання рядка "1" і цифри 2 (обидві операнди повинні бути в змінних), добийся математично правильної відповіді.
 
 let num1 = "1";
 let num2 = 2;
@@ -42,3 +47,15 @@ let ones = num % 10;
 let reversedNum = ones * 100 + tens * 10 + hundreds;
 
 alert(`Inverse number is: ${reversedNum}`);
+
+// Користувач вводить суму вкладу в банк на 2 місяці, з процентною ставкою депозиту 5% річних. Вивести суму нарахованих відсотків.
+
+const period = 2;
+const percent = 0.05;
+let deposit = Number(prompt("Enter the amount of the deposit", ""));
+if (!isNaN(deposit) && deposit > 1) {
+  let profit = ((deposit * percent) / 12) * period;
+  alert(`You will get a profit in two months ${profit.toFixed(2)} uan`);
+} else {
+  alert("Enter the correct deposit amount");
+}
